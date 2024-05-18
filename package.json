@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "type": "module",
   "description": "[![Actions Status](https://github.com/JohnKonor3106/js-starter-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/JohnKonor3106/js-starter-project-44/actions)",
-  "main": "index.js",
+  "main": " brain-games.js",
   "bin": {
     "brain-games": "bin/brain-games.js"
   },
@@ -11,5 +11,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Alex",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
 }
