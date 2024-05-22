@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 
-function questionForUser(){
+function questionForUser() {
   const answer = readlineSync.question('May I have your name?');
   return answer;
 }
