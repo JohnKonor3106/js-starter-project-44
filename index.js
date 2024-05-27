@@ -26,9 +26,20 @@ function checkedAnswer(question, trueAnswer){
     return correctUnswer == answerPlayer;
   }
 
-  function getSymbol(arr){
+function getSymbol(arr){
     const index = getRandomNumber(0, 2);
     return arr[index];
    }  
 
-  export {getRandomNumber, questionForUser, checkedAnswer, getSymbol};
+function getGCD(num1, num2){
+   const maxValue = 100;
+   const GCD = [];
+   for(let i = 1; i < maxValue; i++){
+      if(num1 % i === 0 && num2 % i === 0){
+        GCD.push(i);
+      }
+    }
+    return Math.max(...GCD);
+  }
+
+  export {getRandomNumber, questionForUser, checkedAnswer, getSymbol, getGCD};
