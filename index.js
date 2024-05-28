@@ -42,4 +42,28 @@ function getGCD(num1, num2){
     return Math.max(...GCD);
   }
 
-  export {getRandomNumber, questionForUser, checkedAnswer, getSymbol, getGCD};
+function getProgression(start, step, length){
+    const startNumber = getRandomNumber(1, start);
+    const stepProgression = getRandomNumber(2, step);
+    const lengthProgression = getRandomNumber(10, length);
+    
+    let countProgression = 0
+    let progression = [];
+    let result = 0;
+    for(let i = startNumber; countProgression < lengthProgression; i += stepProgression){
+      countProgression++;
+      result = i;
+      progression.push(result);
+  }
+  return progression;
+}
+
+function hideElement(arr, item){
+   let hideItem = arr;
+   hideItem[item] = '..';
+   return hideItem.join(' ');
+}
+
+  export {getRandomNumber, questionForUser, checkedAnswer, getSymbol, getGCD,
+          getProgression, hideElement
+  };
