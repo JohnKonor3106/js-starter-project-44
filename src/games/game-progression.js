@@ -7,16 +7,14 @@ function progression(name){
    
     const arrayProgression = utils.getProgression(10, 4, 10);
     const index = utils.getRandomNumber(0, arrayProgression.length - 1);
-    console.log(index)
     const correctUnswer = arrayProgression[index];
-    console.log(correctUnswer)
     const hideElemArray = utils.hideElement(arrayProgression, index);
     const answer = readlineSync.question(`${hideElemArray}`);
     const response = utils.checkedAnswer(answer, correctUnswer);
 
     if(response){
         res += 1;
-    console.log('Correct!');
+        console.log('Correct!');
     }else{
         console.log(`${answer} is wrong answer ;(. Correct answer was ${correctUnswer}.
             Let's try again, ${name}!`)

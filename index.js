@@ -50,6 +50,7 @@ function getProgression(start, step, length){
     let countProgression = 0
     let progression = [];
     let result = 0;
+    
     for(let i = startNumber; countProgression < lengthProgression; i += stepProgression){
       countProgression++;
       result = i;
@@ -64,6 +65,24 @@ function hideElement(arr, item){
    return hideItem.join(' ');
 }
 
+function isPrime(num) {
+  if (num <= 1) {
+      return false;
+  }
+  if (num <= 3) {
+      return true;
+  }
+  if (num % 2 === 0 || num % 3 === 0) {
+      return false;
+  }
+  for (let i = 5; i * i <= num; i += 6) {
+      if (num % i === 0 || num % (i + 2) === 0) {
+          return false;
+      }
+  }
+  return true;
+}
+
   export {getRandomNumber, questionForUser, checkedAnswer, getSymbol, getGCD,
-          getProgression, hideElement
+          getProgression, hideElement, isPrime
   };
