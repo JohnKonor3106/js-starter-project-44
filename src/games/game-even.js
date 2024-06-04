@@ -20,7 +20,7 @@ function even(name) {
       } else if (answer === 'no') {
         correctUnswer = 'yes';
       }
-      console.log(`${answer} is wrong answer ;(. Correct answer was ${correctUnswer}.
+      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctUnswer}'.
                 Let's try again, ${name}!`);
     }
   } else {
