@@ -7,7 +7,7 @@ function even(name) {
   let res = 0;
   let correctUnswer;
   console.log(`Question: ${num}`);
-  const answer = readlineSync.question(`You answer: `);
+  const answer = readlineSync.question(`Your answer: `);
 
   if (answer === 'yes' || answer === 'no') {
     const response = utils.checkedAnswer(answer, isEven);

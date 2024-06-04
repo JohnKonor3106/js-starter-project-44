@@ -9,7 +9,7 @@ function calc(name) {
   const symbol = utils.getSymbol(operators);
   let correctUnswer = 0;
   console.log(`Question: ${num1} ${symbol} ${num2}`)
-  const answer = readlineSync.question(`You answer: `);
+  const answer = readlineSync.question(`Your answer: `);
 
   if (typeof answer === typeof 'number') {
     if (symbol === '+') {

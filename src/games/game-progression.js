@@ -9,7 +9,7 @@ function progression(name) {
   const correctUnswer = arrayProgression[index];
   const hideElemArray = utils.hideElement(arrayProgression, index);
   console.log(`Quetion: ${hideElemArray}`);
-  const answer = readlineSync.question(`You answer: `);
+  const answer = readlineSync.question(`Your answer: `);
   const response = utils.checkedAnswer(answer, correctUnswer);
 
   if (response) {
