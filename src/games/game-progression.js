@@ -2,7 +2,7 @@ import readlineSync from 'readline-sync';
 import * as utils from '../../index.js';
 
 function progression(name) {
-  let res = 0;
+  let statusGame = true;;
 
   const arrayProgression = utils.getProgression(10, 4, 10);
   const index = utils.getRandomNumber(0, arrayProgression.length - 1);
@@ -13,28 +13,18 @@ function progression(name) {
   const response = utils.checkedAnswer(answer, correctUnswer);
 
   if (response) {
-    res += 1;
     console.log('Correct!');
   } else {
     console.log(`${answer} is wrong answer ;(. Correct answer was ${correctUnswer}.
             Let's try again, ${name}!`);
+            statusGame = false;
   }
 
-  return res;
+  return statusGame;
 }
 
 function gameProgression() {
-  let res = 0;
-  const namePlayer = utils.solution();
-  console.log('What number is missing in the progression?');
-
-  res += progression(namePlayer);
-  res += progression(namePlayer);
-  res += progression(namePlayer);
-
-  if (res === 3) {
-    console.log(`Congratulations, ${namePlayer}!`);
-  }
+  utils.gameProcess(progression, 'progression');
 }
 
 export default gameProgression;

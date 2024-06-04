@@ -34,6 +34,31 @@ function getSymbol(arr) {
   return arr[index];
 }
 
+function gameProcess(game, nameGame){
+  let count = 0;
+  const name = solution();
+  if(nameGame === 'even'){
+    console.log('Answer "yes" if the number is even, otherwise answer "no".');
+  } else if(nameGame === 'calc'){
+    console.log('What is the result of the expression?');
+    } else if(nameGame === 'gcd'){
+      console.log('Find the greatest common divisor of given numbers.');
+      }else if(nameGame === 'progression'){
+        console.log('What number is missing in the progression?');
+        }else if(nameGame === 'prime'){
+          console.log('"yes" if given number is prime. Otherwise answer "no".');
+          }
+   
+ 
+  while(game(name) && count <=  3){
+    count += 1
+    if(count === 3){
+      console.log(`Congratulations, ${name}!`);
+        return;
+    }
+  }
+}
+
 function getGCD(num1, num2) {
   const maxValue = 100;
   const GCD = [];
@@ -88,5 +113,5 @@ function isPrime(num) {
 
 export {
   getRandomNumber, solution, checkedAnswer, getSymbol, getGCD,
-  getProgression, hideElement, isPrime,
+  getProgression, hideElement, isPrime, gameProcess
 };

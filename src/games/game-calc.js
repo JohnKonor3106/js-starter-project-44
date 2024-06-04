@@ -2,7 +2,7 @@ import readlineSync from 'readline-sync';
 import * as utils from '../../index.js';
 
 function calc(name) {
-  let res = 0;
+  let statusGame = true;
   const num1 = utils.getRandomNumber(1, 50);
   const num2 = utils.getRandomNumber(1, 50);
   const operators = ['+', '-', '*'];
@@ -11,7 +11,6 @@ function calc(name) {
   console.log(`Question: ${num1} ${symbol} ${num2}`)
   const answer = readlineSync.question(`Your answer: `);
 
-  if (typeof answer === typeof 'number') {
     if (symbol === '+') {
       correctUnswer = num1 + num2;
     } else if (symbol === '-') {
@@ -23,31 +22,20 @@ function calc(name) {
     const response = utils.checkedAnswer(answer, correctUnswer);
 
     if (response) {
-      res += 1;
       console.log('Correct!');
+
     } else {
       console.log(`${answer} is wrong answer ;(. Correct answer was ${correctUnswer}.
                     Let's try again, ${name}!`);
+                    statusGame = false;
     }
-  } else {
-    console.log('error!');
-  }
+ 
 
-  return res;
+  return statusGame;;
 }
 
 function gameCalc() {
-  let res = 0;
-  const namePlayer = utils.solution();
-  console.log('What is the result of the expression?');
-
-  res += calc(namePlayer);
-  res += calc(namePlayer);
-  res += calc(namePlayer);
-
-  if (res === 3) {
-    console.log(`Congratulations, ${namePlayer}!`);
-  }
+  utils.gameProcess(calc, 'calc');
 }
 
 export default gameCalc;
