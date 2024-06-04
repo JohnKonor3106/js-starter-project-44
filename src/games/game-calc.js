@@ -8,8 +8,8 @@ function calc(name) {
   const operators = ['+', '-', '*'];
   const symbol = utils.getSymbol(operators);
   let correctUnswer = 0;
-
-  const answer = readlineSync.question(`${num1} ${symbol} ${num2}`);
+  console.log(`Question: ${num1} ${symbol} ${num2}`)
+  const answer = readlineSync.question(`You answer: `);
 
   if (typeof answer === typeof 'number') {
     if (symbol === '+') {

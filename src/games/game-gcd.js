@@ -6,8 +6,8 @@ function gcd(name) {
   const num1 = utils.getRandomNumber(1, 100);
   const num2 = utils.getRandomNumber(1, 100);
   const correctUnswer = utils.getGCD(num1, num2);
-  const answer = readlineSync.question(`${num1} ${num2}`);
-
+  console.log(`Question: ${num1} ${num2}`);
+  const answer = readlineSync.question('You answer: ')
   const response = utils.checkedAnswer(answer, correctUnswer);
 
   if (response) {
