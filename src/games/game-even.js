@@ -31,7 +31,7 @@ function even(name) {
 
 function gameEven() {
   let res = 0;
-  const namePlayer = utils.questionForUser();
+  const namePlayer = utils.solution();
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
 
   res += even(namePlayer);

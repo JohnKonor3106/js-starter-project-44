@@ -24,7 +24,7 @@ function progression(name) {
 
 function gameProgression() {
   let res = 0;
-  const namePlayer = utils.questionForUser();
+  const namePlayer = utils.solution();
   console.log('What number is missing in the progression?');
 
   res += progression(namePlayer);

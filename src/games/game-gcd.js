@@ -22,7 +22,7 @@ function gcd(name) {
 
 function gameGCD() {
   let res = 0;
-  const namePlayer = utils.questionForUser();
+  const namePlayer = utils.solution();
   console.log('What is the result of the expression?');
 
   res += gcd(namePlayer);

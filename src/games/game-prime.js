@@ -31,7 +31,7 @@ function prime(name) {
 
 function gamePrime() {
   let res = 0;
-  const namePlayer = utils.questionForUser();
+  const namePlayer = utils.solution();
   console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
 
   res += prime(namePlayer);

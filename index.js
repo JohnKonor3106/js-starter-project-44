@@ -5,11 +5,14 @@ function getRandomNumber(min, max) {
   return Math.round(num);
 }
 
-function questionForUser() {
+function solution() {
   console.log('Welcome to the Brain Games!');
   const answer = readlineSync.question('May I have your name?');
+  console.log(`Hello, ${answer}`);
   return answer;
 }
+
+
 
 function checkedAnswer(question, trueAnswer) {
   let answerPlayer = question;
@@ -84,6 +87,6 @@ function isPrime(num) {
 }
 
 export {
-  getRandomNumber, questionForUser, checkedAnswer, getSymbol, getGCD,
+  getRandomNumber, solution, checkedAnswer, getSymbol, getGCD,
   getProgression, hideElement, isPrime,
 };
