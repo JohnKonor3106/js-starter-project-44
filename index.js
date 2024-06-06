@@ -71,9 +71,12 @@ function getGCD(num1, num2) {
 }
 
 function getProgression(start, step, length) {
+
+
+  
   const startNumber = getRandomNumber(1, start);
   const stepProgression = getRandomNumber(2, step);
-  const lengthProgression = getRandomNumber(10, length);
+  const lengthProgression = getRandomNumber(5, length);
 
   let countProgression = 0;
   const progression = [];
