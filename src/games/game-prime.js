@@ -7,7 +7,7 @@ function prime(name) {
   const num = utils.getRandomNumber(1, 50);
   let correctUnswer = utils.isPrime(num);
   console.log(`Question: ${num}`);
-  const answer = readlineSync.question(`Your answer: `);
+  const answer = readlineSync.question('Your answer: ');
 
   const response = utils.checkedAnswer(answer, correctUnswer);
 
@@ -22,7 +22,7 @@ function prime(name) {
       }
       console.log(`${answer} is wrong answer ;(. Correct answer was ${correctUnswer}.
                  Let's try again, ${name}!`);
-                 statusGame = false;
+      statusGame = false;
     }
   } else {
     statusGame = false;

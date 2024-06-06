@@ -7,7 +7,7 @@ function gcd(name) {
   const num2 = utils.getRandomNumber(1, 100);
   const correctUnswer = utils.getGCD(num1, num2);
   console.log(`Question: ${num1} ${num2}`);
-  const answer = readlineSync.question('Your answer: ')
+  const answer = readlineSync.question('Your answer: ');
   const response = utils.checkedAnswer(answer, correctUnswer);
 
   if (response) {
@@ -15,7 +15,7 @@ function gcd(name) {
   } else {
     console.log(`${answer} is wrong answer ;(. Correct answer was ${correctUnswer}.
             Let's try again, ${name}!`);
-            statusGame = false;
+    statusGame = false;
   }
   return statusGame;
 }

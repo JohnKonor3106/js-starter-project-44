@@ -8,9 +8,9 @@ function even(name) {
   const isEven = (num % 2) === 0;
   let correctUnswer;
   console.log(`Question: ${num}`);
-  const answer = readlineSync.question(`Your answer: `);
+  const answer = readlineSync.question('Your answer: ');
 
-  if (answer === 'yes' || answer === 'no' && statusGame) {
+  if ((answer === 'yes' || answer === 'no') && statusGame) {
     const response = utils.checkedAnswer(answer, isEven);
     if (response) {
       statusGame = true;
@@ -23,7 +23,7 @@ function even(name) {
       }
       console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctUnswer}'.
                 Let's try again, ${name}!`);
-                statusGame = false;
+      statusGame = false;
     }
   } else {
     statusGame = false;
@@ -33,9 +33,7 @@ function even(name) {
 }
 
 function gameEven() {
-
-   utils.gameProcess(even,'even');
-
+  utils.gameProcess(even, 'even');
 }
 
 export default gameEven;

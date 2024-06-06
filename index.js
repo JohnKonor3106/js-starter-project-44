@@ -12,8 +12,6 @@ function solution() {
   return answer;
 }
 
-
-
 function checkedAnswer(question, trueAnswer) {
   let answerPlayer = question;
   const correctUnswer = trueAnswer;
@@ -26,7 +24,7 @@ function checkedAnswer(question, trueAnswer) {
     return correctUnswer === answerPlayer;
   }
 
-  return correctUnswer == answerPlayer;
+  return correctUnswer === +answerPlayer;
 }
 
 function getSymbol(arr) {
@@ -34,27 +32,26 @@ function getSymbol(arr) {
   return arr[index];
 }
 
-function gameProcess(game, nameGame){
+function gameProcess(game, nameGame) {
   let count = 0;
   const name = solution();
-  if(nameGame === 'even'){
+  if (nameGame === 'even') {
     console.log('Answer "yes" if the number is even, otherwise answer "no".');
-  } else if(nameGame === 'calc'){
+  } else if (nameGame === 'calc') {
     console.log('What is the result of the expression?');
-    } else if(nameGame === 'gcd'){
-      console.log('Find the greatest common divisor of given numbers.');
-      }else if(nameGame === 'progression'){
-        console.log('What number is missing in the progression?');
-        }else if(nameGame === 'prime'){
-          console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
-          }
-   
- 
-  while(game(name) && count <=  3){
-    count += 1
-    if(count === 3){
+  } else if (nameGame === 'gcd') {
+    console.log('Find the greatest common divisor of given numbers.');
+  } else if (nameGame === 'progression') {
+    console.log('What number is missing in the progression?');
+  } else if (nameGame === 'prime') {
+    console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
+  }
+
+  while (game(name) && count <= 3) {
+    count += 1;
+    if (count === 3) {
       console.log(`Congratulations, ${name}!`);
-        return;
+      return;
     }
   }
 }
@@ -71,9 +68,6 @@ function getGCD(num1, num2) {
 }
 
 function getProgression(start, step, length) {
-
-
-  
   const startNumber = getRandomNumber(1, start);
   const stepProgression = getRandomNumber(2, step);
   const lengthProgression = getRandomNumber(5, length);
@@ -116,5 +110,5 @@ function isPrime(num) {
 
 export {
   getRandomNumber, solution, checkedAnswer, getSymbol, getGCD,
-  getProgression, hideElement, isPrime, gameProcess
+  getProgression, hideElement, isPrime, gameProcess,
 };

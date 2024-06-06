@@ -8,30 +8,28 @@ function calc(name) {
   const operators = ['+', '-', '*'];
   const symbol = utils.getSymbol(operators);
   let correctUnswer = 0;
-  console.log(`Question: ${num1} ${symbol} ${num2}`)
-  const answer = readlineSync.question(`Your answer: `);
+  console.log(`Question: ${num1} ${symbol} ${num2}`);
+  const answer = readlineSync.question('Your answer: ');
 
-    if (symbol === '+') {
-      correctUnswer = num1 + num2;
-    } else if (symbol === '-') {
-      correctUnswer = num1 - num2;
-    } else if (symbol === '*') {
-      correctUnswer = num1 * num2;
-    }
+  if (symbol === '+') {
+    correctUnswer = num1 + num2;
+  } else if (symbol === '-') {
+    correctUnswer = num1 - num2;
+  } else if (symbol === '*') {
+    correctUnswer = num1 * num2;
+  }
 
-    const response = utils.checkedAnswer(answer, correctUnswer);
+  const response = utils.checkedAnswer(answer, correctUnswer);
 
-    if (response) {
-      console.log('Correct!');
-
-    } else {
-      console.log(`${answer} is wrong answer ;(. Correct answer was ${correctUnswer}.
+  if (response) {
+    console.log('Correct!');
+  } else {
+    console.log(`${answer} is wrong answer ;(. Correct answer was ${correctUnswer}.
                     Let's try again, ${name}!`);
-                    statusGame = false;
-    }
- 
+    statusGame = false;
+  }
 
-  return statusGame;;
+  return statusGame;
 }
 
 function gameCalc() {
