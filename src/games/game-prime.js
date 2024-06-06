@@ -6,7 +6,7 @@ function prime(name) {
 
   const num = utils.getRandomNumber(1, 50);
   let correctUnswer = utils.isPrime(num);
-  console.log(`Quetion: ${num}`);
+  console.log(`Question: ${num}`);
   const answer = readlineSync.question(`Your answer: `);
 
   const response = utils.checkedAnswer(answer, correctUnswer);
