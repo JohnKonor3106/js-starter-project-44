@@ -8,7 +8,7 @@ function progression(name) {
   const index = utils.getRandomNumber(0, arrayProgression.length - 1);
   const correctUnswer = arrayProgression[index];
   const hideElemArray = utils.hideElement(arrayProgression, index);
-  console.log(`Quetion: ${hideElemArray}`);
+  console.log(`Question: ${hideElemArray}`);
   const answer = readlineSync.question(`Your answer: `);
   const response = utils.checkedAnswer(answer, correctUnswer);
 
