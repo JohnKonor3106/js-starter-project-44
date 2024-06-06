@@ -46,7 +46,7 @@ function gameProcess(game, nameGame){
       }else if(nameGame === 'progression'){
         console.log('What number is missing in the progression?');
         }else if(nameGame === 'prime'){
-          console.log('"yes" if given number is prime. Otherwise answer "no".');
+          console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
           }
    
  
